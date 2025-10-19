@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>ICT (Information and Communications Technology)</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rubik:wght@400&display=swap" rel="stylesheet">
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+background-color: #f3e5f5;
+font-family: 'Rubik', sans-serif;
+color: #3b1e5c;
+line-height: 1.6;
+}
+h1, h2 {
+font-family: 'Orbitron', sans-serif;
+background-color: #b388eb;
+color: white;
+border-radius: 8px;
+text-align: center;
+box-shadow: 0 0 10px rgba(100, 50, 150, 0.3);
+margin-bottom: 0;
+}
+h3 {
+font-family: 'Orbitron', sans-serif;
+color: #4a148c;
+margin-top: 0;
+}
+p {
+text-align: justify;
+font-size: 16px;
+margin-top: 0;
+margin-bottom: 0;
+}
+ul, ol {
+margin-left: 20px;
+font-size: 16px;
+margin-bottom: 0;
+}
+pre {
+background-color: #ede7f6;
+border-radius: 6px;
+overflow-x: auto;
+font-size: 15px;
+margin-bottom: 0;
+}
+.my-reflection {
+background-color: #d1c4e9;
+border-left: 5px solid #7e57c2;
+font-style: italic;
+margin-top: 0;
+margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+<h1>Quarter 2 – ICT 9: Cascading Style Sheets (CSS)</h1>
+<p>This quarter focuses on <strong>Cascading Style Sheets (CSS)</strong>, an essential technology used to style and design web pages. CSS helps separate content from design, allowing developers to control layout, colors, fonts, and overall appearance efficiently.</p>
+
+<h2>Lesson 1 – Introduction to CSS</h2>
+<h3>Definition:</h3>
+<p>Cascading Style Sheets (CSS) is a style sheet language used to define the presentation of an HTML document. It determines how web pages look by controlling layout, colors, fonts, and overall design.</p>
+<h3>Purpose of CSS:</h3>
+<ul>
+<li>To separate content (HTML) from design (CSS).</li>
+<li>To allow consistent design across multiple pages.</li>
+<li>To make websites easier to update and maintain.</li>
+</ul>
+<h3>Importance of CSS:</h3>
+<ul>
+<li>Provides a uniform design for all pages.</li>
+<li>Saves time and effort since one CSS file can control many pages.</li>
+<li>Makes websites more visually appealing and professional.</li>
+</ul>
+<div class="my-reflection">
+I learned that CSS is essential for separating content from design. It allows me to maintain uniform styles across webpages, save time, and make sites visually professional. Understanding the layers of a webpage also showed me how content, design, and interactivity work together seamlessly.
+</div>
+
+<h2>Lesson 2 – Structure and Types of CSS</h2>
+<h3>Structure of a CSS Rule:</h3>
+<p>A CSS rule consists of a selector, a property, and a value.</p>
+<pre>
+h1 {
+color: blue;
+text-align: center;
+}
+</pre>
+<h3>Kinds of CSS:</h3>
+<ol>
+<li>External CSS – Separate file, used for multiple pages.</li>
+<li>Internal CSS – Inside &lt;style&gt; tag, for one page.</li>
+<li>Inline CSS – Inside an element, for small specific changes.</li>
+</ol>
+<h3>Order of Priority:</h3>
+<ol>
+<li>Inline CSS (highest)</li>
+<li>Internal CSS</li>
+<li>External CSS (lowest)</li>
+</ol>
+<div class="my-reflection">
+I learned that CSS can be applied in multiple ways, each with a specific purpose. Understanding how external, internal, and inline CSS work, along with their priority, helps me organize my styles efficiently and prevent conflicts when designing webpages.
+</div>
+
+<h2>Lesson 3 – CSS Display Property, Div, and Span Tags</h2>
+<h3>Display Property:</h3>
+<p>The display property determines how elements appear on a webpage, such as block, inline, or none.</p>
+<ul>
+<li>block – Starts on a new line, full width.</li>
+<li>inline – Stays within a line, only as wide as content.</li>
+<li>none – Element is hidden.</li>
+</ul>
+<h3>Block vs Inline Elements:</h3>
+<ul>
+<li>Block-level: div, p, section, h1 – full width, new line.</li>
+<li>Inline: span, a, em – width as needed, stays in line.</li>
+</ul>
+<h3>Div and Span:</h3>
+<p>Div is used for grouping sections, span is used for styling parts of text.</p>
+<div class="my-reflection">
+I learned how the display property controls layout and how div and span differ. This helps me structure content correctly and style sections or text fragments effectively for better design and readability.
+</div>
+
+<h2>Lesson 4 – CSS Rules and Class Selectors</h2>
+<h3>Definition:</h3>
+<p>CSS rules define how elements are styled. Class selectors target groups of elements without affecting others.</p>
+<ol>
+<li>Fonts – typeface, size, style, weight.</li>
+<li>Colors & Backgrounds – text color, background color/images.</li>
+<li>Text – alignment, transformation, decoration.</li>
+<li>Boxes & Layout – margins, padding, borders, structure.</li>
+<li>Lists – bullets, numbers, indentation.</li>
+<li>Tag Classification – group elements using classes.</li>
+</ol>
+<pre>
+.highlight {
+color: white;
+background-color: green;
+}
+</pre>
+<div class="my-reflection">
+I learned that class selectors allow me to style multiple elements consistently without affecting others. Using CSS rules effectively helps me manage text, colors, layouts, and structure, making webpages organized and visually appealing.
+</div>
+
+<h2>Lesson 5 – CSS Selectors</h2>
+<h3>Definition:</h3>
+<p>Selectors are patterns that determine which HTML elements are styled.</p>
+<ol>
+<li>Class – targets elements with a class.</li>
+<li>Element – targets all elements of a type.</li>
+<li>ID – targets a single element by ID.</li>
+<li>Universal – targets all elements.</li>
+<li>Group – multiple selectors at once.</li>
+<li>Attribute – based on element attributes.</li>
+</ol>
+<div class="my-reflection">
+I learned how to select specific elements for styling using different selectors. This knowledge allows me to apply precise styles to particular elements or groups, improving the control and design flexibility of my webpages.
+</div>
+
+<h2>Lesson 6 – Dimensions and Pseudo-Classes</h2>
+<h3>Definition:</h3>
+<p>Dimensions define element sizes. Pseudo-classes apply styles based on state or position.</p>
+<ul>
+<li>Width & Height – element size.</li>
+<li>Max/Min Width & Height – limit sizes.</li>
+<li>Line Height – spacing of text.</li>
+</ul>
+<pre>
+a:link { color: red; }
+a:hover { color: green; }
+</pre>
+<div class="my-reflection">
+I learned how to control the size of elements and enhance interactivity using pseudo-classes. By adjusting dimensions and applying styles when users hover or interact, I can create dynamic and responsive webpages that improve user experience.
+</div>
+
+</body>
+</html>

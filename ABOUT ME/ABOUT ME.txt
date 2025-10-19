@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Space</title>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {
+  background: linear-gradient(to bottom, #fff8e1, #ffecb3);
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  color: #ffb300;
+  font-family: 'Righteous', cursive;
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+.section {
+  background-color: #fff59d;
+  border: 2px solid #ffd54f;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+h2 {
+  color: #fbc02d;
+  font-family: 'Righteous', cursive;
+  font-size: 1.8em;
+  text-align: center;
+  margin: 10px 0;
+}
+p {
+  text-align: justify;
+  color: #ff8f00;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1em;
+  margin: 0 10px 10px 10px;
+}
+.media-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 0 10px 0;
+}
+.media-section img,
+.media-section video {
+  height: auto;
+  border-radius: 10px;
+}
+.personal-images img,
+.friends-images img,
+.family-images img {
+  width: 49%; /* 2 images horizontal */
+}
+.personal-videos video,
+.friends-videos video,
+.family-videos video {
+  width: 100%; /* 1 video for personal, 2 removed */
+}
+@media screen and (max-width: 700px) {
+  .personal-images img,
+  .personal-videos video,
+  .friends-images img,
+  .friends-videos video,
+  .family-images img,
+  .family-videos video {
+    width: 80%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>My Personal Space</h1>
+
+<!-- Personal Details -->
+<div class="section">
+<h2>Personal Details</h2>
+<p>
+My name is Sheila May Lapizar, I am 14 years old and I was born on May 21, 2011.
+Some of my favorite things include horror movies, geography, blank maps, cats, crime stories and documentaries.
+</p>
+<div class="media-section personal-images">
+  <img src="^1.jpg" alt="Personal 1">
+  <img src="^2.jpg" alt="Personal 2">
+</div>
+<div class="media-section personal-videos">
+  <video src="Sheila.mp4" controls></video>
+</div>
+</div>
+
+<!-- Circle of Friends -->
+<div class="section">
+<h2>Circle of Friends</h2>
+<p>
+My circle of friends is an important part of my life. We spend time together,
+share experiences, and support each other in both happy and challenging moments.
+</p>
+<div class="media-section friends-images">
+  <img src="^3.jpg" alt="Friend 1">
+  <img src="^4.jpg" alt="Friend 2">
+</div>
+</div>
+
+<!-- My Family -->
+<div class="section">
+<h2>My Family</h2>
+<p>
+My family is my foundation. They provide love, guidance, and support in everything I do.
+Spending time with family, celebrating traditions, and sharing experiences strengthens our bond.
+</p>
+<div class="media-section family-images">
+  <img src="^5.jpg" alt="Family 1">
+  <img src="^6.jpg" alt="Family 2">
+</div>
+</div>
+
+<script>
+// Set default volume for all videos
+document.querySelectorAll('video').forEach(v => v.volume = 0.7);
+</script>
+
+</body>
+</html>
