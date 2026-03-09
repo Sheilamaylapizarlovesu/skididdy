@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>AP 9 Lessons: Quarter 4</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #fdf6e3, #fce1f2);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    color: #8b5cf6;
+    text-shadow: 2px 2px 4px #ccc;
+}
+
+/* Collapsible styles */
+.collapsible {
+    background-color: #f472b6;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 90%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 22px;
+    margin: 10px auto;
+    border-radius: 15px;
+    font-family: 'Dancing Script', cursive;
+    transition: background 0.3s;
+}
+
+.collapsible:hover {
+    background-color: #e11d48;
+}
+
+.active, .collapsible:after {
+    font-weight: bold;
+}
+
+/* Content box when open */
+.content {
+    padding: 20px 25px;
+    display: none;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffe4e1, #fff0f5);
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    max-width: 90%;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    font-size: 18px;
+    line-height: 1.7;
+    border: 2px solid #f472b6;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Bullets styling */
+.content ul {
+    padding-left: 25px;
+    margin: 0;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+/* Floating shapes */
+@keyframes float1 {
+    0% { transform: translateY(0px) rotate(0deg);}
+    50% { transform: translateY(-20px) rotate(180deg);}
+    100% { transform: translateY(0px) rotate(360deg);}
+}
+
+.shape {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: float1 6s ease-in-out infinite;
+}
+
+.shape1 { background: #ffb3c1; top: 50px; left: 20%; animation-delay: 0s;}
+.shape2 { background: #a0e7e5; top: 200px; left: 70%; animation-delay: 2s;}
+.shape3 { background: #ffd6a5; top: 400px; left: 40%; animation-delay: 4s;}
+</style>
+</head>
+<body>
+
+<h1>AP 9 Lessons: Quarter 4</h1>
+
+<!-- Lesson structure -->
+<button class="collapsible">Pambansang Kaunlaran</button>
+<div class="content" data-original>
+<ul>
+<li>Isang estado ng bansa kung saan tinatamasa ng mga tao mula sa pinakamababang uri ng mamamayan ang nakakamanghang pagbabago sa ekonomiya at pamumuhay</li>
+<li><b>Mga Konsepto:</b> Pagbabago, Pag-unlad, Pagsulong, Ebolusyon</li>
+<li><b>Pagbabago:</b> Proseso ng pag-iiba o pagkakaroon ng kaibahan sa lipunan at ekonomiya</li>
+<li><b>Pag-unlad:</b> Pagbabago mula sa mababa tungo sa mataas na antas ng pamumuhay; Kaunlaran kung yaman ng buhay ng tao ay umuunlad</li>
+<li><b>Pagsulong:</b> Pag-usad tungo sa layunin, pagpapalawak ng kakayahan at kaalaman</li>
+<li><b>Ebolusyon:</b> Pagbabago sa mga katangian sa loob ng mahabang panahon</li>
+<li><b>Dalawang Konsepto ng Pag-unlad:</b> Tradisyunal at Makabago (Todo) </li>
+<li><b>Salik sa Pagsulong ng Ekonomiya:</b> Likas na yaman, Yamang-tao, Kapital, Teknolohiya at Inobasyon</li>
+<li><b>Palatandaan ng Pag-unlad:</b> Makatwiran at dinamikong kaayusan ng panlipunan, kasaganaan, kalayaan sa kahirapan</li>
+<li><b>Sukat ng Kaunlaran:</b> HDI - kalusugan, edukasyon, antas ng pamumuhay</li>
+<li><b>Antas ng Kaunlaran:</b> Maunlad, Umuunlad, Papaunlad</li>
+<li><b>Tungkulin ng Mamamayan:</b> Sumunod sa batas, alagaan ang kapaligiran, maging produktibo, tangkilikin ang lokal na produkto, makilahok sa gawaing pansibiko</li>
+</ul>
+</div>
+
+<!-- Agrikultura -->
+<button class="collapsible">Agrikultura</button>
+<div class="content" data-original>
+<ul>
+<li>Isang agham at sining sa pagpaparami ng hayop at tanim</li>
+<li><b>MGA GAWAIN:</b> Pagsasaka, Pangingisda, Paghahayupan, Paggugubat/Pagtotroso</li>
+<li><b>Kahalagahan:</b> Pinagmumulan ng pagkain, hilaw na materyales, trabaho, dolyar sa bansa</li>
+<li><b>Suliranin:</b> Climate Change, kakulangan sa teknolohiya, polusyon, peste sa hayop</li>
+<li><b>Mga Patakaran at Programa:</b> CARP 1988, Batas Republika, DA programs, scholarships, gulayan projects, NARRA</li>
+<li><b>Sangay ng Pamahalaan:</b> DA, BFAR, BAI, ERDB</li>
+</ul>
+</div>
+
+<!-- Industriya -->
+<button class="collapsible">Industriya</button>
+<div class="content" data-original>
+<ul>
+<li>Pagproseso ng hilaw na materyal at paggawa ng produkto</li>
+<li><b>Sub-Sektor:</b> Pagmimina, Pagmamanupaktura, Konstruksyon, Utilities</li>
+<li><b>Kahalagahan:</b> Hanapbuhay, dolyar sa bansa, intermediate products</li>
+<li><b>Pagkaka-ugnay sa Agrikultura:</b> Hilaw na sangkap at kagamitan mula sa industriya ay ginagamit sa agrikultura</li>
+<li><b>Suliranin:</b> Pondo, kompetisyon, paghina ng lokal na industriya</li>
+<li><b>Patakarang Pang-ekonomiya:</b> Filipino First, Microfinancing, BOT, APT, Online Business, Retail Trade Laws, Oil Deregulation</li>
+<li><b>Sangay ng Pamahalaan:</b> DTI, BOI, PEZA, SEC</li>
+</ul>
+</div>
+
+<!-- Sektor ng Paglilingkod -->
+<button class="collapsible">Sektor ng Paglilingkod</button>
+<div class="content" data-original>
+<ul>
+<li>Tumutulong sa produksyon, distribusyon, kalakalan, at pagkonsumo</li>
+<li><b>Pormal:</b> Transportasyon, Kalakalan, Pananalapi, Paupahan, Paglilingkod ng Pampribado at Pampubliko</li>
+<li><b>Ahensya:</b> DOLE, OWWA, POEA, TESDA, PRC, CHED</li>
+<li><b>Batas:</b> Holiday Pay, Minimum Wage, Overtime, Night Shift, Service Charges, Maternity/Paternity Leave, Thirteenth Month Pay</li>
+<li><b>Impormal na Sektor:</b> Walang pormal na dokumento, underground economy, pedicab driver, tindero sa kalsada, sari-sari store, home-based work</li>
+<li><b>Programa para sa Mamamayan:</b> DILP, SEA-K, ISLA, CWP, 4Ps</li>
+<li>Kahalagahan: Trabaho, GDP, proteksyon sa mamimili, dagdag kita sa mamamayan</li>
+</ul>
+</div>
+
+<!-- Kalakalang Panlabas -->
+<button class="collapsible">Kalakalang Panlabas</button>
+<div class="content" data-original>
+<ul>
+<li>Palitan ng produkto at serbisyo sa pagitan ng mga bansa</li>
+<li><b>Dahilan:</b> Pagkakaiba sa teknolohiya, pinagkukunang yaman, panlasa, halaga ng produksyon</li>
+<li><b>Uri:</b> Bilateral, Bloc</li>
+<li><b>Export/Import:</b> Export - pagluluwas; Import - pag-aangkat</li>
+<li><b>Patakaran:</b> Taripa, Quota, Subsidy</li>
+<li><b>Batayan:</b> Absolute at Comparative Advantage</li>
+<li><b>Balance of Trade:</b> Trade Deficit (import>export), Trade Surplus (export>import)</li>
+<li><b>Global Organization:</b> WTO, APEC, ASEAN</li>
+<li><b>Programa:</b> Liberalisasyon sa Bangko (R.A.7721), FTSC, TIIC, Center for Industrial Competitiveness</li>
+<li>Kahalagahan: Mas maraming produkto, kalidad, pamilihan global</li>
+</ul>
+</div>
+
+<!-- Floating shapes -->
+<div class="shape shape1"></div>
+<div class="shape shape2"></div>
+<div class="shape shape3"></div>
+
+<script>
+// Collapsible + bullet typing effect
+const collapsibles = document.querySelectorAll(".collapsible");
+
+collapsibles.forEach(btn => {
+    btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            content.querySelectorAll('li').forEach(li => li.style.opacity = 0);
+        } else {
+            content.style.display = "block";
+            const items = content.querySelectorAll('li');
+            items.forEach(li => li.style.opacity = 0);
+            items.forEach((li, index) => {
+                setTimeout(() => {
+                    li.style.transition = 'opacity 0.3s';
+                    li.style.opacity = 1;
+                }, index * 100);
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
