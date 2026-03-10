@@ -3,247 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>MY E-PORTFOLIO</title>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
-body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(135deg, #89f7fe, #66a6ff);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
+
+body{
+margin:0;
+font-family:'Quicksand',sans-serif;
+background:#ffd6e7;
+display:flex;
+flex-direction:column;
+align-items:center;
+min-height:100vh;
+overflow-x:hidden;
 }
 
-/* Header */
-header {
-    width: 100%;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    color: #fff;
-    text-align: center;
-    padding: 50px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+/* DASHED BORDER FRAME */
+
+body::before{
+content:"";
+position:fixed;
+top:15px;
+left:15px;
+right:15px;
+bottom:15px;
+border:6px dashed #a6d8ff;
+border-radius:25px;
+pointer-events:none;
+z-index:-1;
 }
 
-header h1 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 3.5rem;
-    margin: 0;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+/* HEADER */
+
+header{
+width:100%;
+text-align:center;
+padding:50px 0;
 }
 
-/* Menu container */
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    gap: 25px;
+header h1{
+font-family:'Quicksand',sans-serif;
+font-size:3rem;
+color:#ff4fa3;
+margin:0;
+font-weight:600;
+letter-spacing:2px;
 }
 
-/* Menu bars */
-.menu a {
-    text-decoration: none;
-    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
-    color: #2d3436;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    padding: 25px 70px;
-    border-radius: 50px;
-    border: 3px solid #fff;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-    transition: all 0.4s ease;
-    width: 360px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+/* MENU */
+
+.menu{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:40px;
+gap:22px;
 }
 
-/* Hover animation */
-.menu a::after {
-    content: "";
-    position: absolute;
-    left: -50%;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background: rgba(255,255,255,0.25);
-    transition: all 0.4s ease;
-    border-radius: 50px;
+.menu a{
+text-decoration:none;
+background:#b8f2d6;
+color:#2f6b55;
+font-weight:600;
+font-size:1.3rem;
+padding:16px 45px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transition:all .3s ease;
+border:2px solid #8dd9b5;
 }
 
-.menu a:hover::after {
-    left: 0;
-    width: 100%;
+.menu a:hover{
+transform:translateY(-5px) scale(1.03);
+box-shadow:0 15px 35px rgba(0,0,0,0.35);
+background:#a4ebc8;
 }
 
-.menu a:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+/* RESPONSIVE */
+
+@media (min-width:700px){
+.menu{
+flex-direction:row;
+flex-wrap:wrap;
+justify-content:center;
+}
 }
 
-/* Responsive for larger screens */
-@media (min-width: 700px) {
-    .menu {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .menu a {
-        margin: 15px;
-    }
+/* LOADING SCREEN */
+
+#loading{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,200,220,0.9);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-size:1.5rem;
+color:#ff4fa3;
+visibility:hidden;
+z-index:1000;
 }
 
-/* Floating circles/shapes */
-.shape {
-    position: fixed;
-    border-radius: 50%;
-    opacity: 0.35;
-    animation: float 6s ease-in-out infinite;
-    z-index: -1;
+.spinner{
+border:6px solid #ffe6f1;
+border-top:6px solid #ff4fa3;
+border-radius:50%;
+width:60px;
+height:60px;
+animation:spin 1s linear infinite;
+margin-bottom:15px;
 }
 
-.shape1 { background: #ff9a9e; width: 80px; height: 80px; top: 50px; left: 15%; animation-delay: 0s;}
-.shape2 { background: #fad0c4; width: 120px; height: 120px; top: 300px; left: 75%; animation-delay: 2s;}
-.shape3 { background: #a6c1ee; width: 60px; height: 60px; top: 500px; left: 40%; animation-delay: 4s;}
-.shape4 { background: #fbc2eb; width: 100px; height: 100px; top: 200px; left: 50%; animation-delay: 1s;}
-.shape5 { background: #ffe6a7; width: 70px; height: 70px; top: 400px; left: 20%; animation-delay: 3s;}
-
-@keyframes float {
-    0% { transform: translateY(0px);}
-    50% { transform: translateY(-25px);}
-    100% { transform: translateY(0px);}
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
 }
 
-/* Loading overlay */
-#loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.65);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    color: #fff;
-    z-index: 9999;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+/* FLOATING STAR CONFETTI */
+
+.star{
+position:fixed;
+color:#ffd84d;
+font-size:22px;
+animation:floatStar linear infinite;
+opacity:0.9;
 }
 
-#loading.show {
-    opacity: 1;
-    pointer-events: all;
+@keyframes floatStar{
+0%{transform:translateY(100vh) rotate(0deg);}
+100%{transform:translateY(-10vh) rotate(360deg);}
 }
 
-/* Spinner */
-#loading .spinner {
-    border: 5px solid rgba(255,255,255,0.3);
-    border-top: 5px solid #fff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-    margin-right: 20px;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
-}
-
-/* Confetti container */
-.confetti-piece {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    z-index: 10000;
-    opacity: 0.8;
-    pointer-events: none;
-    animation: fall 3s linear forwards;
-}
-
-@keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(800px) rotate(360deg); }
-}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>MY E-PORTFOLIO</h1>
+<h1 id="title"></h1>
 </header>
 
 <div class="menu">
-<!-- 11 clickable bars -->
-<a href="AP_1_2Q.html" onclick="showLoading(event)">AP 1st & 2nd Quarter Content</a>
-<a href="BrowserOutputs.html" onclick="showLoading(event)">Browser Outputs (3rd Qtr)</a>
-<a href="Events3Q.html" onclick="showLoading(event)">3rd Quarter Events</a>
-<a href="AP_4Q_Collab.html" onclick="showLoading(event)">4th Quarter AP Collab</a>
-<a href="NoliDrama.html" onclick="showLoading(event)">Noli Drama Video</a>
-<a href="Lesson4Q.html" onclick="showLoading(event)">4th Quarter Lesson Compilation</a>
-<a href="Events4Q.html" onclick="showLoading(event)">4th Quarter Events</a>
-<a href="AP 9.html" onclick="showLoading(event)">AP Lessons</a>
-<a href="ICT.html" onclick="showLoading(event)">ICT Lessons</a>
-<a href="ABOUT ME.html" onclick="showLoading(event)">Personal Details</a>
-<a href="Events.html" onclick="showLoading(event)">School Events</a>
+
+<a href="AP.html" onclick="openPage(event)">AP Lessons</a>
+<a href="ICT.html" onclick="openPage(event)">ICT Lessons</a>
+<a href="ABOUT ME.html" onclick="openPage(event)">Personal Details</a>
+<a href="EVENTS.html" onclick="openPage(event)">School Events</a>
+
+<a href="ICT 1st and 2nd Quarter.html" onclick="openPage(event)">ICT 1st and 2nd Quarter</a>
+<a href="ICT 3rd Quarter Browser Output.html" onclick="openPage(event)">ICT 3rd Quarter Browser Output</a>
+<a href="3rd Quarter Events.html" onclick="openPage(event)">3rd Quarter Events</a>
+<a href="AP 4th Quarter.html" onclick="openPage(event)">AP 4th Quarter</a>
+<a href="Noli Me Tangere.html" onclick="openPage(event)">Noli Me Tangere</a>
+<a href="ICT 4th Quarter Compilation.html" onclick="openPage(event)">ICT 4th Quarter Compilation</a>
+<a href="4th Quarter Events.html" onclick="openPage(event)">4th Quarter Events</a>
+
 </div>
 
-<!-- Floating shapes -->
-<div class="shape shape1"></div>
-<div class="shape shape2"></div>
-<div class="shape shape3"></div>
-<div class="shape shape4"></div>
-<div class="shape shape5"></div>
-
-<!-- Loading overlay -->
 <div id="loading">
-    <div class="spinner"></div>
-    Loading...
+<div class="spinner"></div>
+Loading...
 </div>
 
 <script>
-function showLoading(event) {
-    event.preventDefault(); // prevent immediate navigation
-    const link = event.currentTarget.href;
-    const loader = document.getElementById('loading');
-    loader.classList.add('show');
-    launchConfetti();
 
-    setTimeout(() => {
-        window.location.href = link;
-    }, 1200); // 1.2 seconds delay
+/* TITLE TYPING */
+
+const text="MY E-PORTFOLIO";
+let i=0;
+
+function typeTitle(){
+if(i<text.length){
+document.getElementById("title").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typeTitle,100);
+}
 }
 
-// Confetti generator
-function launchConfetti() {
-    for (let i = 0; i < 50; i++) {
-        const confetti = document.createElement('div');
-        confetti.classList.add('confetti-piece');
-        confetti.style.backgroundColor = hsl(${Math.random() * 360}, 100%, 60%);
-        confetti.style.left = Math.random() * window.innerWidth + 'px';
-        confetti.style.width = 5 + Math.random() * 8 + 'px';
-        confetti.style.height = 5 + Math.random() * 8 + 'px';
-        confetti.style.animationDuration = 2 + Math.random() * 2 + 's';
-        document.body.appendChild(confetti);
-        setTimeout(() => confetti.remove(), 4000);
-    }
+typeTitle();
+
+/* LOADING PAGE */
+
+function openPage(event){
+
+event.preventDefault();
+
+let link=event.currentTarget.href;
+
+let loading=document.getElementById("loading");
+
+loading.style.visibility="visible";
+
+setTimeout(function(){
+window.location.href=link;
+},1200);
+
 }
+
+/* FLOATING STARS */
+
+function createStars(){
+
+for(let i=0;i<30;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+star.innerHTML="★";
+
+star.style.left=Math.random()*100+"vw";
+star.style.animationDuration=(Math.random()*6+6)+"s";
+star.style.fontSize=(Math.random()*15+15)+"px";
+
+document.body.appendChild(star);
+
+}
+
+}
+
+createStars();
+
 </script>
 
 </body>
 </html>
-
