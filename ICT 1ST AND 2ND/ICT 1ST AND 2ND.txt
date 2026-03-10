@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ICT Q1 & Q2 Interactive Lessons</title>
+<style>
+/* GENERAL BODY */
+body {
+font-family: Arial, sans-serif;
+background: linear-gradient(to right, #ffe6e6, #fff0f0);
+margin: 20px;
+line-height: 1.5;
+overflow-x: hidden;
+}
+h1, h2 {
+color: darkred;
+text-align: center;
+text-shadow: 1px 1px 3px #900;
+}
+
+/* LESSON CARDS */
+.lesson {
+background: rgba(255,255,255,0.95);
+border: 2px solid #ff6666;
+border-radius: 15px;
+padding: 15px 20px;
+margin-bottom: 30px;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+}
+.lesson:hover {
+box-shadow: 0 8px 15px rgba(255,0,0,0.5);
+transform: translateY(-5px);
+transition: 0.3s;
+}
+
+/* COLLAPSIBLE CONTENT */
+.content {
+display: none;
+padding-top: 10px;
+}
+
+/* BUTTONS */
+.click-button {
+padding: 8px 15px;
+background: linear-gradient(to right, #ff4d4d, #ff9999);
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin: 5px 0;
+box-shadow: 2px 2px 5px #990000;
+}
+.click-button:hover {
+transform: scale(1.05);
+transition: 0.2s;
+}
+
+/* FLOATING FLOWERS */
+.flower {
+position: absolute;
+width: 20px;
+height: 20px;
+background: radial-gradient(circle, #ff0000 0%, #ff6666 70%);
+border-radius: 50%;
+animation: float 6s infinite;
+pointer-events: none;
+}
+@keyframes float {
+0% { transform: translateY(0px) translateX(0px); opacity:1; }
+50% { transform: translateY(-50px) translateX(20px); opacity:0.7; }
+100% { transform: translateY(0px) translateX(0px); opacity:1; }
+}
+
+/* BOXES FOR EXAMPLES */
+.css-box {
+width: auto;
+padding: 10px;
+margin: 10px 0;
+border: 2px solid #ff3333;
+border-radius: 10px;
+text-align: center;
+background-color: #fff0f0;
+transition: 0.3s;
+}
+.css-box:hover {
+background: linear-gradient(to right, #ffcccc, #ff9999);
+transform: scale(1.05) rotate(3deg);
+}
+
+/* HOVER EFFECT */
+.hover-example:hover { color: red; cursor: pointer; transition: 0.3s; }
+
+</style>
+</head>
+<body>
+
+<h1>🌸 ICT Q1 & Q2 Interactive Lessons 🌸</h1>
+
+<!-- ===================== QUARTER 1 ===================== -->
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q1 Lesson 1: Introduction to ICT</h2>
+<div class="content">
+<div class="css-box">
+<p>ICT = Information & Communication Technology</p>
+<ul>
+<li>Organizes information efficiently</li>
+<li>Improves communication</li>
+<li>Supports learning and work productivity</li>
+</ul>
+<button class="click-button" onclick="toggleDir(event)">Show Example Folder Structure</button>
+<div id="dir" style="display:none;">
+<pre>
+Documents/
+├── Projects/
+│ └── Science/
+└── Images/
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q1 Lesson 2: Computer Hardware</h2>
+<div class="content">
+<div class="css-box">
+<p>Key Hardware Components:</p>
+<ul>
+<li onclick="alert('CPU: Central Processing Unit')">CPU</li>
+<li onclick="alert('Monitor: Display Device')">Monitor</li>
+<li onclick="alert('Keyboard: Input Device')">Keyboard</li>
+<li onclick="alert('Mouse: Input Device')">Mouse</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q1 Lesson 3: Computer Software</h2>
+<div class="content">
+<div class="css-box">
+<p>Types of Software:</p>
+<ul>
+<li onclick="alert('System Software: Operating systems like Windows, Linux')">System Software</li>
+<li onclick="alert('Application Software: Programs like Word, Excel, Chrome')">Application Software</li>
+<li onclick="alert('Utility Software: Antivirus, Disk Cleaner')">Utility Software</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q1 Lesson 4: Networking Basics</h2>
+<div class="content">
+<div class="css-box">
+<p>Network Types:</p>
+<ul>
+<li class="hover-example">LAN - Local Area Network</li>
+<li class="hover-example">WAN - Wide Area Network</li>
+<li class="hover-example">MAN - Metropolitan Area Network</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q1 Lesson 5: File Management</h2>
+<div class="content">
+<div class="css-box">
+<p>Example Files:</p>
+<a href="#" onclick="alert('Opening Report.docx')">Report.docx</a><br>
+<a href="#" onclick="alert('Opening Presentation.pptx')">Presentation.pptx</a>
+</div>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q1 Lesson 6: ICT Safety & Security</h2>
+<div class="content">
+<div class="css-box">
+<p>Safety Tips:</p>
+<ul>
+<li>Use strong passwords</li>
+<li>Install antivirus software</li>
+<li>Do not click suspicious links</li>
+<li>Backup important files regularly</li>
+</ul>
+<button class="click-button" onclick="alert('Tip: Always download software from trusted sources!')">Show Safety Tip</button>
+</div>
+</div>
+</div>
+
+<!-- ===================== QUARTER 2 ===================== -->
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q2 Lesson 1: CSS Introduction</h2>
+<div class="content">
+<div class="css-box">
+<h1 style="color: darkgreen;">CSS Example Header</h1>
+<p style="color: green;">This paragraph is styled using inline CSS.</p>
+</div>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q2 Lesson 2: CSS Selectors</h2>
+<div class="content">
+<div class="css-box">
+<p id="id-example" style="color:red;">ID Selector Example</p>
+<p class="class-example" style="background-color:yellow;">Class Selector Example</p>
+<div style="font-family:Arial;">Universal Selector Example</div>
+<p>Group Selector Example: <span style="color:blue;">H1, P all blue</span></p>
+</div>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q2 Lesson 3: Box Model & Display</h2>
+<div class="content">
+<div class="css-box" id="box" onclick="toggleBox(event)">Click Me!</div>
+<p>The Box Model includes: <strong>Content, Padding, Border, Margin</strong></p>
+<p>Display types: <strong>block, inline, inline-block, none</strong></p>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q2 Lesson 4: Typography</h2>
+<div class="content">
+<div class="css-box">
+<p style="font-family:'Times New Roman'; font-size:16px; font-weight:bold; color:purple;">
+Bold purple paragraph using font properties
+</p>
+<p>font-style: italic, font-variant: small-caps, line-height:1.5</p>
+</div>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q2 Lesson 5: Lists & Bullets</h2>
+<div class="content">
+<div class="css-box">
+<ul style="list-style-type:circle;">
+<li>Apples</li>
+<li>Bananas</li>
+<li>Oranges</li>
+</ul>
+<ul style="list-style-type:upper-roman;">
+<li>Item I</li>
+<li>Item II</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="lesson" onclick="toggleContent(this)">
+<h2>Q2 Lesson 6: Pseudo-classes & Elements</h2>
+<div class="content">
+<div class="css-box">
+<a href="#" class="hover-example">Link Example (Hover Me)</a>
+<p>First-letter pseudo-element: <span style="font-size:24px; color:red;">T</span>his is a paragraph.</p>
+<p>Hover effect: <span class="hover-example">Hover over me!</span></p>
+</div>
+</div>
+</div>
+
+<!-- FLOWERS -->
+<script>
+function createFlowers() {
+for(let i=0; i<20; i++){
+let flower = document.createElement("div");
+flower.classList.add("flower");
+flower.style.left = Math.random()*window.innerWidth + "px";
+flower.style.top = Math.random()*window.innerHeight + "px";
+flower.style.animationDuration = 3 + Math.random()*5 + "s";
+document.body.appendChild(flower);
+}
+}
+function toggleContent(el) {
+let content = el.querySelector(".content");
+if(content.style.display === "block") content.style.display = "none";
+else content.style.display = "block";
+}
+function toggleDir(event) {
+event.stopPropagation();
+let dir = document.getElementById("dir");
+dir.style.display = dir.style.display === "block" ? "none" : "block";
+}
+function toggleBox(event) {
+event.stopPropagation();
+let box = document.getElementById("box");
+if(box.style.backgroundColor === "lightblue"){
+box.style.backgroundColor = "white";
+box.textContent = "Click Me!";
+} else {
+box.style.backgroundColor = "lightblue";
+box.textContent = "Box Toggled!";
+}
+}
+createFlowers();
+</script>
+</body>
+</html>
