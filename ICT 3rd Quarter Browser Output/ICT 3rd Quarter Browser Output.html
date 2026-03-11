@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3rd Quarter Browser Output</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Quicksand',sans-serif;
+background:linear-gradient(120deg,#ffd6e7,#c9e9ff,#ffe7b6);
+background-size:400% 400%;
+animation:bgMove 10s infinite alternate;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:40px;
+overflow-x:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+/* TITLE */
+
+h1{
+font-size:3rem;
+color:#ff4fa3;
+letter-spacing:3px;
+text-shadow:0 5px 15px rgba(0,0,0,0.2);
+margin-bottom:50px;
+}
+
+/* CARDS */
+
+.card{
+width:320px;
+background:linear-gradient(145deg,#ffffff,#ffeaf6);
+border-radius:25px;
+padding:20px;
+margin:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+transition:.4s;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 25px 60px rgba(0,0,0,0.35);
+}
+
+/* BUTTON */
+
+button{
+width:100%;
+border:none;
+padding:16px;
+font-size:1.2rem;
+border-radius:20px;
+background:linear-gradient(45deg,#ff6ec7,#ff4fa3);
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 8px 25px rgba(255,79,163,0.6);
+}
+
+/* IMAGE */
+
+.content{
+display:none;
+margin-top:15px;
+text-align:center;
+}
+
+img{
+width:100%;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* FLOATING OBJECTS */
+
+.float{
+position:fixed;
+font-size:30px;
+animation:floatUp linear infinite;
+opacity:0.8;
+pointer-events:none;
+}
+
+@keyframes floatUp{
+0%{transform:translateY(100vh) rotate(0deg);}
+100%{transform:translateY(-10vh) rotate(360deg);}
+}
+
+/* SPARKLES */
+
+.sparkle{
+position:absolute;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+animation:sparkle 2s infinite alternate;
+}
+
+@keyframes sparkle{
+0%{opacity:0.3; transform:scale(1);}
+100%{opacity:1; transform:scale(1.8);}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>✨ 3rd Quarter Browser Outputs ✨</h1>
+
+<div class="card">
+<button onclick="toggle('b1')">Browser Output 1</button>
+<div id="b1" class="content">
+<img src="1.jpg">
+</div>
+</div>
+
+<div class="card">
+<button onclick="toggle('b2')">Browser Output 2</button>
+<div id="b2" class="content">
+<img src="-2.jpg">
+</div>
+</div>
+
+<div class="card">
+<button onclick="toggle('b3')">Browser Output 3</button>
+<div id="b3" class="content">
+<img src="-3.jpg">
+</div>
+</div>
+
+<script>
+
+function toggle(id){
+let x=document.getElementById(id);
+
+if(x.style.display==="block"){
+x.style.display="none";
+}else{
+x.style.display="block";
+}
+}
+
+/* FLOATING OBJECTS */
+
+const objects=["⭐","🌸","✨","💫","🌟"];
+
+for(let i=0;i<35;i++){
+
+let obj=document.createElement("div");
+
+obj.className="float";
+obj.innerHTML=objects[Math.floor(Math.random()*objects.length)];
+
+obj.style.left=Math.random()*100+"vw";
+obj.style.animationDuration=(Math.random()*8+6)+"s";
+obj.style.fontSize=(Math.random()*20+20)+"px";
+
+document.body.appendChild(obj);
+
+}
+
+</script>
+
+</body>
+</html>
