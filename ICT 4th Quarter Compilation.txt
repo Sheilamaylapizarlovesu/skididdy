@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT 4th Quarter Lessons</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+<style>
+/* ===== Body & Background ===== */
+body {
+margin: 0;
+font-family: 'Montserrat', sans-serif;
+background: linear-gradient(120deg,#2b0057,#5b00c9,#a200ff,#4b0082);
+background-size: 400% 400%;
+animation: bg 15s ease infinite;
+color: white;
+overflow-x: hidden;
+}
+@keyframes bg {
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* ===== Header ===== */
+h1 {
+text-align: center;
+font-family: 'Orbitron', sans-serif;
+font-size: 3rem;
+margin: 50px 0 30px;
+letter-spacing: 4px;
+background: linear-gradient(90deg,#e0aaff,#c77dff,#9d4edd);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 0 0 10px #ffbfff;
+}
+
+/* ===== Container ===== */
+.container {
+max-width: 900px;
+margin: auto;
+padding: 20px;
+}
+
+/* ===== Lessons ===== */
+.lesson {
+margin-bottom: 25px;
+border-radius: 25px;
+overflow: hidden;
+backdrop-filter: blur(12px);
+background: rgba(255,255,255,0.08);
+box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+transition: transform 0.4s, box-shadow 0.4s;
+}
+.lesson:hover {
+transform: scale(1.05);
+box-shadow: 0 25px 60px rgba(255,255,255,0.3);
+}
+.lesson button {
+width: 100%;
+padding: 20px;
+border: none;
+font-size: 1.3rem;
+font-weight: 600;
+cursor: pointer;
+color: white;
+background: linear-gradient(90deg,#c77dff,#9d4edd,#7b2cbf);
+transition: 0.3s;
+}
+.lesson button:hover {
+background: linear-gradient(90deg,#e0aaff,#c77dff,#9d4edd);
+}
+.content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.6s ease;
+padding: 0 20px;
+line-height: 1.7;
+}
+.content p {
+padding: 20px 0;
+}
+
+/* ===== Floating blobs ===== */
+.blob {
+position: fixed;
+border-radius: 50%;
+filter: blur(90px);
+opacity: 0.6;
+z-index: -1;
+animation: float 20s infinite ease-in-out;
+}
+@keyframes float {
+0% {transform: translateY(0) translateX(0);}
+50% {transform: translateY(-120px) translateX(100px);}
+100% {transform: translateY(0) translateX(0);}
+}
+
+/* ===== Floating stars ===== */
+.star {
+position: fixed;
+color: #ffbfff;
+font-size: 20px;
+animation: twinkle linear infinite;
+opacity: 0.8;
+}
+@keyframes twinkle {
+0%,100% {opacity:0.8; transform:translateY(0) rotate(0deg);}
+50% {opacity:0.2; transform:translateY(-50px) rotate(180deg);}
+}
+</style>
+</head>
+<body>
+
+<h1>ICT 4th Quarter Lessons</h1>
+
+<div class="container">
+<div class="lesson">
+<button onclick="toggle(this)">Lesson 1 — Events & Pop-Up Boxes</button>
+<div class="content">
+<p>Events are actions triggered by the user or browser such as clicking a button, moving the mouse, or loading a webpage. Event handlers connect these actions to JavaScript functions so the webpage reacts to user interaction. Common events include onclick, onmouseover, onload, and onsubmit. Pop-up boxes are windows used to interact with users. The alert() box displays warnings or messages, prompt() asks the user for input, and confirm() asks the user to choose between OK or Cancel.</p>
+</div>
+</div>
+<div class="lesson">
+<button onclick="toggle(this)">Lesson 2 — Conditional Statements</button>
+<div class="content">
+<p>Conditional statements allow programs to make decisions based on conditions. The if statement executes code when a condition is true. If-else provides an alternative action when the condition is false. If-else-if checks multiple conditions sequentially. Nested if statements contain another if inside a condition. The switch statement is used when a variable can have many possible values and each value runs a different set of instructions.</p>
+</div>
+</div>
+<div class="lesson">
+<button onclick="toggle(this)">Lesson 3 — Functions</button>
+<div class="content">
+<p>A function is a reusable block of code that performs a specific task when called. Functions help organize programs and prevent repeating code. They are defined using the keyword function followed by a name and parentheses containing parameters. Parameters provide additional information for processing. Functions may also use the return statement to send results back to the program.</p>
+</div>
+</div>
+<div class="lesson">
+<button onclick="toggle(this)">Lesson 4 — Loops</button>
+<div class="content">
+<p>Loops repeat a block of code until a condition is met. The for loop runs a set number of times. The while loop continues while a condition remains true. The do-while loop runs the code at least once before checking the condition. The for-in loop iterates through properties of objects or arrays. Break stops the loop immediately, while continue skips the current iteration and proceeds to the next one.</p>
+</div>
+</div>
+<div class="lesson">
+<button onclick="toggle(this)">Lesson 5 — Strings, Arrays & Date</button>
+<div class="content">
+<p>Strings represent text and contain properties and methods for manipulating characters. Examples include length, replace(), and toUpperCase(). Arrays store multiple values in a single variable and allow operations such as push(), pop(), sort(), and join(). The Date object is used to access and manipulate the current date and time in JavaScript applications.</p>
+</div>
+</div>
+<div class="lesson">
+<button onclick="toggle(this)">Lesson 6 — Timing & Math Object</button>
+<div class="content">
+<p>JavaScript can execute actions after a specific time using timing functions. setTimeout() runs code after a delay while clearTimeout() cancels the timer. The Math object provides built-in constants and functions used for calculations such as Math.random(), Math.round(), Math.sqrt(), Math.max(), and Math.pow().</p>
+</div>
+</div>
+</div>
+
+<!-- Glowing blobs -->
+<div class="blob" style="width:300px;height:300px;background:#9d4edd;top:10%;left:5%;"></div>
+<div class="blob" style="width:350px;height:350px;background:#c77dff;top:70%;left:70%;"></div>
+<div class="blob" style="width:280px;height:280px;background:#7b2cbf;top:40%;left:80%;"></div>
+
+<!-- Floating stars -->
+<div class="star" style="left:10%;top:20%;">★</div>
+<div class="star" style="left:80%;top:50%;">★</div>
+<div class="star" style="left:50%;top:80%;">★</div>
+<div class="star" style="left:30%;top:60%;">★</div>
+<div class="star" style="left:70%;top:30%;">★</div>
+
+<script>
+function toggle(button){
+let content = button.nextElementSibling;
+if(content.style.maxHeight){
+content.style.maxHeight = null;
+} else {
+content.style.maxHeight = content.scrollHeight + "px";
+}
+}
+</script>
+
+</body>
+</html>
