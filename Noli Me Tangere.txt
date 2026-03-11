@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4th Quarter Events - Noli Me Tangere</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+<style>
+body{
+margin:0;
+font-family:'Montserrat',sans-serif;
+background: linear-gradient(120deg,#fff3b0,#ffdab9,#ffd699,#ffb347);
+background-size:400% 400%;
+animation:bg 12s ease infinite alternate;
+color:#333;
+display:flex;
+flex-direction:column;
+align-items:center;
+min-height:100vh;
+}
+@keyframes bg{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+h1{
+text-align:center;
+font-family:'Orbitron',sans-serif;
+font-size:3rem;
+margin-top:50px;
+letter-spacing:4px;
+background:linear-gradient(90deg,#ffe066,#ff9f1c,#ff6b6b);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.video-container {
+position: relative;
+width: 90%;
+max-width: 1200px;
+height: 720px; /* Full player visible */
+border: 6px solid rgba(255,204,102,0.6);
+border-radius: 25px;
+box-shadow: 0 15px 35px rgba(255,204,102,0.4);
+margin: 50px 0;
+overflow: hidden;
+}
+.video-container iframe {
+width: 100%;
+height: 100%;
+border: none;
+}
+.blob{
+position:fixed;
+border-radius:50%;
+filter:blur(90px);
+opacity:0.5;
+z-index:-1;
+animation:float 18s infinite linear;
+}
+@keyframes float{
+0%{transform:translateY(0) translateX(0);}
+50%{transform:translateY(-120px) translateX(100px);}
+100%{transform:translateY(0) translateX(0);}
+}
+</style>
+</head>
+<body>
+
+<h1>4th Quarter Events — Noli Me Tangere</h1>
+
+<!-- FULLY PLAYABLE VIDEO -->
+<div class="video-container">
+<iframe src="https://drive.google.com/file/d/1S_AuxlT-YRXd7fa8oveV1gddOMZrWzBi/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
+<!-- FLOATING BLOBS -->
+<div class="blob" style="width:300px;height:300px;background:#ffe066;top:10%;left:5%;"></div>
+<div class="blob" style="width:350px;height:350px;background:#ff9f1c;top:70%;left:70%;"></div>
+<div class="blob" style="width:280px;height:280px;background:#ff6b6b;top:40%;left:80%;"></div>
+<div class="blob" style="width:200px;height:200px;background:#ffd699;top:20%;left:50%;"></div>
+<div class="blob" style="width:180px;height:180px;background:#fff3b0;top:60%;left:20%;"></div>
+
+</body>
+</html>
